@@ -21,8 +21,10 @@ In a modular project, two common approaches for managing dependencies and build 
 To implement the version catalog and build logic in your project, follow these steps:
 
 1. **Create the version catalog file:**
-   - In the root directory of your project, create a file called `lib.versions.toml`.
+   - In the directory ../gradle/, create a file called libs.versions.toml.
    - Inside this file, list all your dependencies along with their respective versions using the TOML format.
+![Example Image](![image](https://github.com/mozhgan-peyvand/VersionCatalogSample/assets/34583012/897c5dfd-a9d9-4666-b2d4-594056501044)
+)
 
 2. **Create the `build-logic` module:**
    - Create a new module called `build-logic` within your project.
