@@ -27,14 +27,21 @@ gradlePlugin {
 //    }
     plugins {
         register("androidRetrofit") {
-            id = "cup.android.retrofit"
+            id = "mp.android.retrofit"
             implementationClass = "AndroidRetrofitConventionPlugin"
         }
     }
     plugins {
         register("androidLibraryCompose") {
-            id = "cup.android.library.compose"
+            id = "mp.android.library.compose"
             implementationClass = "AndroidLibraryComposeConventionPlugin"
+        }
+    }
+
+    plugins {
+        register("androidBuildTypes") {
+            id = "cup.android.buildTypes"
+            implementationClass = "AndroidBuildTypesConventionPlugin"
         }
     }
 //    plugins {
