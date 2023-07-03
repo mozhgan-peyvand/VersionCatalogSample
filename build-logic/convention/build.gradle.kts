@@ -13,18 +13,13 @@ dependencies {
 }
 
 gradlePlugin {
-//    plugins {
-//        register("androidHilt") {
-//            id = "cup.android.hilt"
-//            implementationClass = "AndroidHiltConventionPlugin"
-//        }
-//    }
-//    plugins {
-//        register("androidRoom") {
-//            id = "cup.android.room"
-//            implementationClass = "AndroidRoomConventionPlugin"
-//        }
-//    }
+
+    plugins {
+        register("androidSourceFlavors") {
+            id = "cup.android.source.flavors"
+            implementationClass = "AndroidSourceFlavorsConventionPlugin"
+        }
+    }
     plugins {
         register("androidRetrofit") {
             id = "mp.android.retrofit"
@@ -44,52 +39,5 @@ gradlePlugin {
             implementationClass = "AndroidBuildTypesConventionPlugin"
         }
     }
-//    plugins {
-//        register("androidLibrary") {
-//            id = "cup.android.library"
-//            implementationClass = "AndroidLibraryConventionPlugin"
-//        }
-//    }
-//    plugins {
-//        register("androidApplicationCompose") {
-//            id = "cup.android.application.compose"
-//            implementationClass = "AndroidApplicationComposeConventionPlugin"
-//        }
-//    }
-//    plugins {
-//        register("androidApplication") {
-//            id = "cup.android.application"
-//            implementationClass = "AndroidApplicationConventionPlugin"
-//        }
-//    }
-//    plugins {
-//        register("androidFeature") {
-//            id = "cup.android.feature"
-//            implementationClass = "AndroidFeatureConventionPlugin"
-//        }
-//    }
-//    plugins {
-//        register("androidKapt") {
-//            id = "cup.android.kapt"
-//            implementationClass = "AndroidKaptConventionPlugin"
-//        }
-//    }
-//    plugins {
-//        register("androidStoreFlavors") {
-//            id = "cup.android.store.flavors"
-//            implementationClass = "AndroidStoreFlavorsConventionPlugin"
-//        }
-//    }
-//    plugins {
-//        register("androidSourceFlavors") {
-//            id = "cup.android.source.flavors"
-//            implementationClass = "AndroidSourceFlavorsConventionPlugin"
-//        }
-//    }
-//    plugins {
-//        register("androidBuildTypes") {
-//            id = "cup.android.buildTypes"
-//            implementationClass = "AndroidBuildTypesConventionPlugin"
-//        }
-//    }
+
 }
