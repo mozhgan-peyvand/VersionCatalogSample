@@ -133,6 +133,12 @@ To implement the version catalog and build logic in your project, follow these s
 1. **Create custom plugins:**
 2. 
    - First, create a new module named `convention` in your build-logic module.
+   - then add it as an module to setting.gradle(.kts) of build-logic module near rootname: 
+     
+     ```kotlin
+     rootProject.name = "build-logic"
+     include(":convention")
+     
    - Inside the `convention` module, define a `build.gradle.kts` file and apply the Kotlin DSL plugin.
    - Create a Kotlin class, such as `AndroidLibraryComposeConventionPlugin`, to define your custom plugin. Here's an example implementation:
 
