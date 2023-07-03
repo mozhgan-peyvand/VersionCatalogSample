@@ -90,15 +90,25 @@ To implement the version catalog and build logic in your project, follow these s
 3. **Use the version catalog in your project:**
    - In the build files of your modules (e.g., the app module), update the `build.gradle(.kts)` file.
    - Add the dependencies using the `libs` object, referencing the versions from the version catalog.
+   - build.gradle:
+       ```groovy
+            dependencies {
+              implementation libs.retrofit
+              implementation libs.retrofitMoshiConverter
 
-   ```groovy
-   dependencies {
-    implementation libs.retrofit
-    implementation libs.retrofitMoshiConverter
+              implementation libs.moshi
+              kapt libs.moshiCodegen
+            }
+   
+   - build.gradle.kts:
+      ```groovy
+           dependencies {
+            implementation(libs.retrofit)
+            implementation(libs.retrofitMoshiConverter)
 
-    implementation libs.moshi
-    kapt libs.moshiCodegen
-   }
+            implementation(libs.moshi)
+            kapt(libs.moshiCodegen)
+           }
 
 ## Defining New Plugins
 
