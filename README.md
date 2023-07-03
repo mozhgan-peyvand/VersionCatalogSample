@@ -140,8 +140,7 @@ To implement the version catalog and build logic in your project, follow these s
 
    - Custom Conventions: Plugins can enforce custom conventions or best practices in your project. For example, you can create a plugin that enforces specific coding standards, project structure, or naming conventions. This helps maintain consistency and improves the overall code quality across the project.
 
-1. **Create custom plugins:**
-2. 
+1. **Create custom plugins:** 
    - First, create a new module named `convention` in your build-logic module.
    - then add it as an module to setting.gradle(.kts) of build-logic module near rootname: 
      
@@ -172,8 +171,6 @@ To implement the version catalog and build logic in your project, follow these s
      }
      ```
 
-3. **Configure the `convention` module:**
-
    - In the `build.gradle.kts` file of the `convention` module, add the required plugins and dependencies. Here's an example configuration:
 
      ```kotlin
@@ -202,7 +199,7 @@ To implement the version catalog and build logic in your project, follow these s
      }
      ```
 
-4. **Apply the custom plugin:**
+- Apply the custom plugin:
 
    - In the build files of your modules (e.g., the app module), apply the custom plugin using the provided plugin ID. Here's an example:
 
