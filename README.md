@@ -148,31 +148,7 @@ To implement the version catalog and build logic in your project, follow these s
      rootProject.name = "build-logic"
      include(":convention")
      
-   - Inside the `convention` module, define a `build.gradle.kts` file and apply the Kotlin DSL plugin.
-   - Create a Kotlin class, such as `AndroidLibraryComposeConventionPlugin`, to define your custom plugin. Here's an example implementation:
-
-     ```kotlin
-     class AndroidLibraryComposeConventionPlugin : Plugin<Project> {
-         override fun apply(target: Project) {
-             with(target) {
-                 val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
-                 dependencies {
-                     "implementation"(libs.findLibrary("composeCompiler").get())
-                     "implementation"(libs.findLibrary("composeFoundation").get())
-                     "implementation"(libs.findLibrary("composeMaterial").get())
-                     "implementation"(libs.findLibrary("composeRuntime").get())
-                     "implementation"(libs.findLibrary("composeUiTooling").get())
-                     "implementation"(libs.findLibrary("composeUi").get())
-                     "implementation"(libs.findLibrary("activityCompose").get())
-                     "implementation"(libs.findLibrary("composeUiGraphics").get())
-                 }
-             }
-         }
-     }
-     ```
-
-   - In the `build.gradle.kts` file of the `convention` module, add the required plugins and dependencies. Here's an example configuration:
-
+   - Inside the `convention` module, define a `build.gradle.kts` file and apply the Kotlin DSL plugin. add the required plugins and dependencies. Here's an example configuration:
      ```kotlin
      plugins {
          `kotlin-dsl`
@@ -198,7 +174,43 @@ To implement the version catalog and build logic in your project, follow these s
          }
      }
      ```
+   - Create a Kotlin class, such as `AndroidLibraryComposeConventionPlugin`, to define your custom plugin. Here's an example implementation:
 
+     ```kotlin
+     class AndroidLibraryComposeConventionPlugin : Plugin<Project> {
+         override fun apply(target: Project) {
+             with(target) {
+                 val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
+                 dependencies {
+                     "implementation"(libs.findLibrary("composeCompiler").get())
+                     "implementation"(libs.findLibrary("composeFoundation").get())
+                     "implementation"(libs.findLibrary("composeMaterial").get())
+                     "implementation"(libs.findLibrary("composeRuntime").get())
+                     "implementation"(libs.findLibrary("composeUiTooling").get())
+                     "implementation"(libs.findLibrary("composeUi").get())
+                     "implementation"(libs.findLibrary("activityCompose").get())
+                     "implementation"(libs.findLibrary("composeUiGraphics").get())
+                 }
+             }
+         }
+     }
+     ```
+     - It is important to note that the directory structure should be set up as follows:
+       
+     ```kotlin
+     ├── app
+     │   └── build.gradle
+     ├── build-logic
+     │   ├── convention
+     │   │   ├── build.gradle
+     │   │   └── src
+     │   │       └── main
+     │   │           └── kotlin
+     │   │               └── CommonPluginClass.kt
+     │   └── settings.gradle
+     └── settings.gradle
+
+     ```
 - Apply the custom plugin:
 
    - In the build files of your modules (e.g., the app module), apply the custom plugin using the provided plugin ID. Here's an example:
