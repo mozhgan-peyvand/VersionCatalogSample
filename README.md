@@ -213,7 +213,7 @@ To implement the version catalog and build logic in your project, follow these s
      │   │   └── src
      │   │       └── main
      │   │           └── kotlin
-     │   │               └── CommonPluginClass.kt
+     │   │               └── AndroidLibraryComposeConventionPlugin.kt
      │   └── settings.gradle
      └── settings.gradle
 
