@@ -111,25 +111,6 @@ To implement the version catalog and build logic in your project, follow these s
            }
 
 ## Defining New Plugins
-
-1. **Create custom plugins:**
-   - Within the `convention` module, create Kotlin classes for your custom plugins.
-   - These plugins can apply conventions, configurations, or additional dependencies to your modules.
-   - For example, you can create an `AndroidLibraryComposeConventionPlugin` to add Jetpack Compose dependencies automatically.
-
-2. **Apply the custom plugin:**
-   - In the build files of your modules (e.g., the app module), apply the custom plugin using the `id` or `implementationClass` provided in the plugin definition.
-   ```groovy
-   plugins {
-       id 'com.android.application'
-       id 'org.jetbrains.kotlin.android'
-       id 'kotlin-kapt'
-       id 'mp.android.library.compose'
-   }
-
-6. **Building and Running the Project:**
-   - Build and run your project to verify that the dependencies are correctly resolved, and the custom plugin is applied.
-## Defining New Plugins
   Custom plugins in Android development can be extremely helpful for managing complex projects and streamlining repetitive tasks. Here are a few use cases where custom plugins can be beneficial:
 
    - Build Variants or Build Types: Custom plugins allow you to define and configure specific build variants or build types that are unique to your project. For example, you can create a plugin that sets up different configurations for debug, release, or staging builds. This helps in maintaining consistent and efficient build configurations across multiple modules.
