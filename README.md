@@ -174,13 +174,13 @@ To implement the version catalog and build logic in your project, follow these s
          }
      }
      ```
-     **Plugins:** In the Gradle build system, plugins are used to extend the functionality of the build process. They provide pre-defined tasks, configurations, and conventions that can be applied to a project. In the example you provided, the kotlin-dsl plugin is applied, which enables the use of Kotlin DSL syntax in the build.gradle.kts files.
+     **Plugins:** In the Gradle build system, plugins are used to extend the functionality of the build process. They provide pre-defined tasks, configurations, and conventions that can be applied to a project. In the example you provided, the `kotlin-dsl` plugin is applied, which enables the use of Kotlin DSL syntax in the build.gradle.kts files.
 
      **Java Compatibility:** The java block is used to configure the Java compatibility settings for the project. In the example, it sets the source and target compatibility to Java version 17. This ensures that the project can be compiled and executed using Java 17 features.
 
-     **Dependencies:** The dependencies block is used to declare the dependencies required by the project. In the example, the compileOnly configuration is used to include Gradle Android and Kotlin Gradle Plugin dependencies. These dependencies are necessary for the custom plugin to function correctly.
+     **Dependencies:** The dependencies block is used to declare the dependencies required by the project. In the example, the `compileOnly` configuration is used to include Gradle Android and Kotlin Gradle Plugin dependencies. These dependencies are necessary for the custom plugin to function correctly.
 
-     **gradlePlugin:** The gradlePlugin block is used to define a custom Gradle plugin. It allows you to register and configure a plugin with a specific ID and implementation class. In the example, the custom plugin is registered with the ID "androidLibraryCompose" and the implementation class "AndroidLibraryComposeConventionPlugin".
+     **gradlePlugin:** The gradlePlugin block is used to define a custom Gradle plugin. It allows you to register and configure a plugin with a specific ID and implementation class. In the example, the custom plugin is registered with the ID `androidLibraryCompose` and the implementation class `AndroidLibraryComposeConventionPlugin`.
    - Create a Kotlin class, such as `AndroidLibraryComposeConventionPlugin`, to define your custom plugin. Here's an example implementation:
 
      ```kotlin
