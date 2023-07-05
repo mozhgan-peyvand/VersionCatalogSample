@@ -1,4 +1,4 @@
-package com.example.versioncatalogsample.remote.utils
+package com.example.library.remote.utils
 
 import android.content.Context
 import android.net.ConnectivityManager

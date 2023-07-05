@@ -40,4 +40,19 @@ gradlePlugin {
         }
     }
 
+    plugins {
+        register("androidLibrary") {
+            id = "mp.android.library"
+            implementationClass = "AndroidLibraryConventionPlugin"
+        }
+    }
+
+    plugins{
+
+        register("androidApp"){
+            id = "mp.android.application"
+            implementationClass = "AndroidApplicationConventionPlugin"
+        }
+    }
+
 }

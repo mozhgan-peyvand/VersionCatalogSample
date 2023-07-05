@@ -1,4 +1,4 @@
-package com.example.versioncatalogsample.remote.utils
+package com.example.library.remote.utils
 
 
 sealed class Resource<out T > {

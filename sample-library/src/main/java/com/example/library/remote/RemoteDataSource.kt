@@ -1,8 +1,8 @@
-package com.example.versioncatalogsample.remote
+package com.example.library.remote
 
-import com.example.versioncatalogsample.remote.utils.BaseRemoteDataSource
-import com.example.versioncatalogsample.remote.utils.Resource
-import com.example.versioncatalogsample.remote.utils.safeApiCall
+import com.example.library.remote.utils.BaseRemoteDataSource
+import com.example.library.remote.utils.Resource
+import com.example.library.remote.utils.safeApiCall
 
 class RemoteDataSource constructor(
     private val retrofitService: RetrofitService
