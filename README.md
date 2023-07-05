@@ -203,7 +203,7 @@ To implement the version catalog and build logic in your project, follow these s
      ```
      - It is important to note that the directory structure should be set up as follows:
        
-     ```kotlin
+     ```groovy
      ├── app
      │   └── build.gradle
      ├── build-logic
@@ -216,19 +216,19 @@ To implement the version catalog and build logic in your project, follow these s
      │   └── settings.gradle
      └── settings.gradle
 
-     ```
+     
 - Apply the custom plugin:
 
    - In the build files of your modules (e.g., the app module), apply the custom plugin using the provided plugin ID. Here's an example:
 
-     ```kotlin
+     ```groovy
      plugins {
          id 'com.android.application'
          id 'org.jetbrains.kotlin.android'
          id 'kotlin-kapt'
          id 'mp.android.library.compose'
      }
-     ```
+     
 
    - Make sure to include the necessary plugins for your project, such as the Android application plugin and the Kotlin Android plugin.
 

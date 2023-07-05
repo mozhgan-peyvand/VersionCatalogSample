@@ -16,7 +16,7 @@ gradlePlugin {
 
     plugins {
         register("androidSourceFlavors") {
-            id = "cup.android.source.flavors"
+            id = "mp.android.source.flavors"
             implementationClass = "AndroidSourceFlavorsConventionPlugin"
         }
     }
@@ -35,7 +35,7 @@ gradlePlugin {
 
     plugins {
         register("androidBuildTypes") {
-            id = "cup.android.buildTypes"
+            id = "mp.android.buildTypes"
             implementationClass = "AndroidBuildTypesConventionPlugin"
         }
     }

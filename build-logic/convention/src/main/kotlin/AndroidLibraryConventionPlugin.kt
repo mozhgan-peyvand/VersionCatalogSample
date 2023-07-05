@@ -10,8 +10,8 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
         with(target) {
             with(pluginManager) {
                 apply("org.jetbrains.kotlin.android")
-                apply("cup.android.buildTypes")
-                apply("cup.android.source.flavors")
+                apply("mp.android.buildTypes")
+                apply("mp.android.source.flavors")
             }
             extensions.configure<LibraryExtension> {
                 configureKotlinAndroid(this)

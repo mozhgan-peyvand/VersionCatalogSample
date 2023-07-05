@@ -16,9 +16,9 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
         with(target) {
             with(pluginManager) {
                 apply("com.android.application")
-                apply("cup.android.buildTypes")
+                apply("mp.android.buildTypes")
                 apply("org.jetbrains.kotlin.android")
-                apply("cup.android.source.flavors")
+                apply("mp.android.source.flavors")
             }
 
             extensions.configure<ApplicationExtension> {
