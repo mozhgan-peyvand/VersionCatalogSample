@@ -1,4 +1,4 @@
-package com.example.versioncatalogsample.remote
+package com.example.library.remote
 
 import com.squareup.moshi.Moshi
 import okhttp3.ConnectionPool
