@@ -110,6 +110,24 @@ To implement the version catalog and build logic in your project, follow these s
             kapt(libs.moshiCodegen)
            }
 
+           
+- Creating a gradle.properties file for your build-logic module and configuring certain properties like org.gradle.configureondemand, org.gradle.caching, and org.gradle.parallel can provide important benefits for your Gradle build system.llike this:
+      
+    ```groovy
+    org.gradle.configureondemand=true
+    org.gradle.caching=true
+    org.gradle.parallel=true
+
+
+ Let's take a closer look at each property:
+
+**org.gradle.configureondemand=true:** This property enables Gradle's "configuration on demand" feature. By default, Gradle configures all projects in a multi-project build, even if you are only interested in building a specific subproject. Enabling configuration on demand allows Gradle to only configure the necessary projects, resulting in faster build times.
+
+**org.gradle.caching=true:** This property enables Gradle's build cache. The build cache stores the outputs of tasks and can be shared among multiple developers or build agents. When enabled, Gradle will check if a task's inputs and configuration are unchanged since the last build, and if so, it will reuse the outputs from the build cache. This can significantly speed up subsequent builds, especially in scenarios where you have a large codebase or frequently build the same project on multiple machines.
+
+**org.gradle.parallel=true:** This property allows Gradle to execute tasks in parallel, taking advantage of multiple CPU cores. By default, Gradle executes tasks sequentially, but enabling parallel execution can speed up your builds, especially when you have computationally intensive tasks or a large number of tasks. Gradle intelligently determines the optimal parallel execution strategy based on task dependencies, resource availability, and other factors.
+
+
 ## Defining New Plugins
   Custom plugins in Android development can be extremely helpful for managing complex projects and streamlining repetitive tasks. Here are a few use cases where custom plugins can be beneficial:
 
