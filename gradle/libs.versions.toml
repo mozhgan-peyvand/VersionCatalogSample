@@ -16,6 +16,7 @@ composeUiGraphic = "1.4.0-alpha03"
 activityCompose = "1.5.1"
 coreKtx = "1.10.1"
 lifecycleRuntime = "2.6.1"
+composeNavigation = "2.5.2"
 
 [libraries]
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
@@ -35,3 +36,4 @@ composeUiTooling = { module = "androidx.compose.ui:ui-tooling-preview", version.
 composeUiGraphics = { module = "androidx.compose.ui:ui-graphics", version.ref = "composeUiGraphic" }
 coreKtx = { module = "androidx.core:core-ktx", version.ref = "coreKtx"}
 lifecycleRuntime = { module = "androidx.lifecycle:lifecycle-runtime-ktx",version.ref = "lifecycleRuntime"}
+composeNavigation = { module = "androidx.navigation:navigation-compose", version.ref = "composeNavigation"}

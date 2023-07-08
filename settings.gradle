@@ -18,5 +18,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "VersionCatalogSample"
 include ':app'
-//includeBuild 'build-logic'
 include ':sample-library'
+include ':base'
