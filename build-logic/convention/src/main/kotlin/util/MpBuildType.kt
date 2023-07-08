@@ -2,15 +2,15 @@ import com.android.build.api.dsl.BuildType
 import com.android.build.gradle.BaseExtension
 import org.gradle.api.Project
 
-data class CupBuildType(
+data class MpBuildType(
     val name: String,
     val buildConfigs: List<BuildConfigField> = listOf()
 )
 
 fun Project.configureBuildType(
     baseExtension: BaseExtension,
-    buildTypes: List<CupBuildType>,
-    buildTypeConfigurationBlock: BuildType.(buildType: CupBuildType) -> Unit = {}
+    buildTypes: List<MpBuildType>,
+    buildTypeConfigurationBlock: BuildType.(buildType: MpBuildType) -> Unit = {}
 ) {
     baseExtension.buildTypes {
         buildTypes.forEach {

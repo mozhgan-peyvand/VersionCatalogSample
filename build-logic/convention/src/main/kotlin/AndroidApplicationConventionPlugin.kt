@@ -36,7 +36,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
                         .map { it as BaseVariantOutputImpl }
                         .forEach { output ->
                             val outputFileName =
-                                "Cup-${variant.buildType.name}-${variant.flavorName}-v${MpVersions.versionCode}.apk"
+                                "Mp-${variant.buildType.name}-${variant.flavorName}-v${MpVersions.versionCode}.apk"
                             output.outputFileName = outputFileName
                         }
                 }
@@ -59,27 +59,6 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
                 "implementation"(libs.findLibrary("composeUiGraphics").get())
                 "implementation"(libs.findLibrary("coreKtx").get())
                 "implementation"(libs.findLibrary("lifecycleRuntime").get())
-//                "implementation"(libs.findLibrary("hiltWork").get())
-//                "implementation"(libs.findLibrary("firebaseAnalytics").get())
-//                "implementation"(libs.findLibrary("room").get())
-//                "implementation"(libs.findLibrary("javapoet").get())
-//                "implementation"(libs.findLibrary("customActivityOnCrash").get())
-//                "implementation"(libs.findLibrary("rootbeer").get())
-//                "implementation"(libs.findLibrary("securityCrypto").get())
-//                "implementation"(libs.findLibrary("sqlcipher").get())
-//                "implementation"(libs.findLibrary("startupRuntime").get())
-//                "implementation"(libs.findLibrary("workRuntime").get())
-//                "implementation"(libs.findLibrary("gmsBase").get())
-//                "implementation"(libs.findLibrary("multicalendar").get())
-//                "implementation"(libs.findLibrary("kotlinSerialization").get())
-//
-//                "androidTestImplementation"(project(":androidtest-shared"))
-//                "androidTestImplementation"(libs.findLibrary("hiltAndroidTesting").get())
-//                "androidTestImplementation"(libs.findLibrary("mockkAndroid").get())
-//                "androidTestImplementation"(libs.findLibrary("navigationTesting").get())
-//                "androidTestImplementation"(libs.findLibrary("testRunner").get())
-//                "androidTestImplementation"(libs.findLibrary("truth").get())
-//                "testImplementation"(libs.findLibrary("truth").get())
             }
         }
     }
