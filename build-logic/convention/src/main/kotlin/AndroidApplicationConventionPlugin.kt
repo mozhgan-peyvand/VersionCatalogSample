@@ -47,6 +47,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
 
             dependencies {
                 "implementation"(project(":sample-library"))
+                "implementation"(project(":base"))
 
                 "implementation"(libs.findLibrary("composeCompiler").get())
                 "implementation"(libs.findLibrary("composeFoundation").get())
