@@ -38,12 +38,7 @@ fun LibraryScreen() {
         RemoteDataSource(RetrofitHelper.getInstance().create(RetrofitService::class.java))
 
 
-//        VersionCatalogSampleTheme {
-//            // A surface container using the 'background' color from the theme
-//            Surface(
-//                modifier = Modifier.fillMaxSize(),
-//                color = MaterialTheme.colors.background
-//            ) {
+
     val networkHandler = NetworkHandler(LocalContext.current)
     // launching a new coroutine
     coroutineScope.launch {

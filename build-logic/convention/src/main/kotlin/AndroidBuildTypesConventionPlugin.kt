@@ -4,7 +4,7 @@ import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
 
 private val mpBuildTypes = listOf(
-    CupBuildType(
+    MpBuildType(
         name = "debug",
         buildConfigs = listOf(
             BuildConfigField(
@@ -14,7 +14,7 @@ private val mpBuildTypes = listOf(
             )
         )
     ),
-    CupBuildType(
+    MpBuildType(
         name = "release",
         buildConfigs = listOf(
             BuildConfigField(
@@ -24,7 +24,7 @@ private val mpBuildTypes = listOf(
             )
         )
     ),
-    CupBuildType(
+    MpBuildType(
         name = "staging",
         buildConfigs = listOf(
             BuildConfigField(

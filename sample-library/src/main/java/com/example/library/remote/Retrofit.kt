@@ -1,8 +1,10 @@
 package com.example.library.remote
 
+import com.example.library.BuildConfig
 import com.squareup.moshi.Moshi
 import okhttp3.ConnectionPool
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
@@ -10,11 +12,21 @@ import java.util.concurrent.TimeUnit
 
 object RetrofitHelper {
 
-    val baseUrl = "https://quotable.io/"
+    private const val baseUrl = "https://quotable.io/"
 
-    val moshi = Moshi.Builder().build()
+    private val moshi: Moshi = Moshi.Builder().build()
 
-    private val okHttpClient: OkHttpClient = OkHttpClient.Builder()
+    private val loggingInterceptor = HttpLoggingInterceptor().apply {
+        level = if (BuildConfig.DEBUG) {
+            HttpLoggingInterceptor.Level.BODY
+        } else {
+            HttpLoggingInterceptor.Level.NONE
+        }
+    }
+
+    private val okHttpClient: OkHttpClient = OkHttpClient.Builder().addNetworkInterceptor(
+        loggingInterceptor
+    )
         .connectTimeout(60, TimeUnit.SECONDS)
         .readTimeout(60, TimeUnit.SECONDS)
         .writeTimeout(60, TimeUnit.SECONDS)

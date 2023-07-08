@@ -32,7 +32,7 @@ internal fun Project.configureKotlinAndroid(
             buildConfigField(
                 type = "String",
                 name = "APPLICATION_ID",
-                value = "\"ir.partsoftware.cup\""
+                value = "\"VersionCatalogSample\""
             )
 
             vectorDrawables {
