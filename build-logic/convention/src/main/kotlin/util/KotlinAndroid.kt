@@ -19,6 +19,14 @@ internal fun Project.configureKotlinAndroid(
 
             testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
+//            if you want to access versionName and versionCode as fields in the BuildConfig class,
+//            you can use buildConfigField as shown in your code snippet . Otherwise,
+//            you can simply set versionName and versionCode directly within defaultConfig without
+//            using buildConfigField .
+//
+//            versionName = versionName
+//            versionCode = versionCode
+
             buildConfigField(
                 type = "long",
                 name = "VERSION_CODE",
