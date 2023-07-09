@@ -6,6 +6,8 @@ VersionCatalogSample is a sample project that showcases how to manage dependenci
 
 A version catalog is a mechanism for centralizing and managing dependency versions in a Gradle project. Instead of manually specifying version numbers in multiple build files, a version catalog provides a single source of truth for all dependencies. This approach simplifies maintenance, improves consistency, and enables easier updates across the project.
 
+the Giraffe version Android studio assists with identifying outdated versions. It can generate warnings or notifications whenever new versions of dependencies are available. These warnings prompt you to review and update your project's dependencies accordingly, allowing you to leverage the latest features, improvements, and bug fixes.
+
 ## Version Catalog vs BuildSrc in Modular Projects
 
 In a modular project, two common approaches for managing dependencies and build logic are using a version catalog or `buildSrc`. Here are the advantages of using a version catalog:
